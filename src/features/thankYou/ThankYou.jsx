@@ -26,7 +26,7 @@ export default function ThankYou() {
   );
   const downloadPDF = () => {
     axios({
-      url: "https://easy-lease-api.vercel.app/createForm",
+      url: "http://ec2-18-225-11-48.us-east-2.compute.amazonaws.com:3001/createForm",
       method: "POST",
       responseType: "blob", // Important
       data: {
