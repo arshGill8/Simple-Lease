@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import SubmitButton from "../common/SubmitButton";
 import { Name } from "../features/name";
-import { PropertyInfo } from "../features/propertyInfo";
+import { RentalUnit } from "../features/rentalUnit";
 import { ContactInfo } from "../features/contactInfo";
 import { LeaseTermInfo } from "../features/leaseTermInfo";
 import { UtilityInfo } from "../features/utilityInfo";
@@ -31,7 +31,7 @@ export default function App() {
 
   const allPages = {
     1: <Name />,
-    2: <PropertyInfo />,
+    2: <RentalUnit />,
     3: <ContactInfo />,
     4: <LeaseTermInfo />,
     5: <DepositInfo />,

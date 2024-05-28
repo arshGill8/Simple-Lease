@@ -1,40 +1,41 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updatePropertyInfo } from "./propertyInfoSlice";
+import { updateRentalUnit } from "./rentalUnitSlice";
 import InputField from "../../common/InputField";
 import RadioButton from "../../common/RadioButton";
 
-export default function PropertyInfo() {
+export default function rentalUnit() {
   const dispatch = useDispatch();
-  const propertyInfo = useSelector((state) => state.propertyInfo);
+  const rentalUnit = useSelector((state) => state.rentalUnit);
 
-  const handleUpdatePropertyInfo = (e) => {
+  const handleUpdateRentalUnit = (e) => {
     const { name, value } = e.target;
-    dispatch(updatePropertyInfo({ name, value }));
+    dispatch(updateRentalUnit({ name, value }));
   };
 
   return (
     <div className="w-full ">
       <form className="my-10">
-        <h1 className=" mb-5 flex justify-center ">Rental Unit Info</h1>
+        <h1 className=" mb-5 flex justify-center ">Rental Unit</h1>
         <p className="mb-5 text-lg text-center lg:text-xl">
           The landlord will rent to the tenant the rental unit at:
         </p>
 
         <InputField
-          placeholder="Unit (e.g., unit 1 or basement unit)"
+          placeholder="Unit (ex. unit 1 or bsmnt unit)"
           name="unit"
           type="text"
-          onChange={(e) => handleUpdatePropertyInfo(e)}
-          value={propertyInfo.unit}
+          onChange={(e) => handleUpdateRentalUnit(e)}
+          value={rentalUnit.unit}
           className="w-full mb-4 inline border border-gray-300 text-gray-900 text-md rounded-lg p-3 focus:shadow-md "
         />
+        
 
         <InputField
           placeholder="Street Number"
           name="streetNumber"
           type="text"
-          onChange={(e) => handleUpdatePropertyInfo(e)}
-          value={propertyInfo.streetNumber}
+          onChange={(e) => handleUpdateRentalUnit(e)}
+          value={rentalUnit.streetNumber}
           className="w-full mb-4 inline border border-gray-300 text-gray-900 text-md rounded-lg p-3 focus:shadow-md"
         />
 
@@ -42,17 +43,17 @@ export default function PropertyInfo() {
           placeholder="Street Name"
           name="streetName"
           type="text"
-          onChange={(e) => handleUpdatePropertyInfo(e)}
-          value={propertyInfo.streetName}
+          onChange={(e) => handleUpdateRentalUnit(e)}
+          value={rentalUnit.streetName}
           className="w-full mb-4 inline border border-gray-300 text-gray-900 text-md rounded-lg p-3 focus:shadow-md"
         />
 
         <InputField
-          placeholder="Toronto"
+          placeholder="City/Town"
           name="city"
           type="text"
-          onChange={(e) => handleUpdatePropertyInfo(e)}
-          value={propertyInfo.city}
+          onChange={(e) => handleUpdateRentalUnit(e)}
+          value={rentalUnit.city}
           className="w-full mb-4 inline border border-gray-300 text-gray-900 text-md rounded-lg p-3 focus:shadow-md"
         />
 
@@ -60,17 +61,17 @@ export default function PropertyInfo() {
           placeholder="Postal Code"
           name="postalCode"
           type="text"
-          onChange={(e) => handleUpdatePropertyInfo(e)}
-          value={propertyInfo.postalCode}
+          onChange={(e) => handleUpdateRentalUnit(e)}
+          value={rentalUnit.postalCode}
           className="mb-4 w-full inline border border-gray-300 text-gray-900 text-md rounded-lg p-3 focus:shadow-md"
         />
 
         <InputField
-          placeholder="Number of vehicle parking spaces and desc."
+          placeholder="# of parking spaces & desc."
           name="parkingSpace"
           type="text"
-          onChange={(e) => handleUpdatePropertyInfo(e)}
-          value={propertyInfo.parkingSpace}
+          onChange={(e) => handleUpdateRentalUnit(e)}
+          value={rentalUnit.parkingSpace}
           className="w-full mb-4 inline border border-gray-300 text-gray-900 text-md rounded-lg p-3 focus:shadow-md"
         />
 
@@ -85,8 +86,8 @@ export default function PropertyInfo() {
                 name="inCondo"
                 type="radio"
                 value="yes"
-                onChange={(e) => handleUpdatePropertyInfo(e)}
-                checked={propertyInfo.inCondo === "yes"}
+                onChange={(e) => handleUpdateRentalUnit(e)}
+                checked={rentalUnit.inCondo === "yes"}
                 className="w-full"
               />
             </div>
@@ -97,8 +98,8 @@ export default function PropertyInfo() {
                 name="inCondo"
                 type="radio"
                 value="no"
-                onChange={(e) => handleUpdatePropertyInfo(e)}
-                checked={propertyInfo.inCondo === "no"}
+                onChange={(e) => handleUpdateRentalUnit(e)}
+                checked={rentalUnit.inCondo === "no"}
                 className="w-full "
               />
             </div>

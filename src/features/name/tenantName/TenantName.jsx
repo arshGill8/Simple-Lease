@@ -27,14 +27,14 @@ export default function TenantName() {
     <div className="w-full">
       <form className="my-8">
         <div className="mb-12">
-          <h1 className="flex justify-center py-1">TenantName Name(s)</h1>
+          <h1 className="flex justify-center py-1">Tenant(s)</h1>
 
           {tenantName.map((singleTenantName, i) => (
             <div key={i}>
               <div className="md:flex w-full gap-10 mb-1">
                 <div className="w-full">
                   <input
-                    placeholder="Tenant's Legal First Name"
+                    placeholder="First Name"
                     name="tenantFirstName"
                     type="text"
                     onChange={(e) => handleTenantNameChange(e, i)}
@@ -44,7 +44,7 @@ export default function TenantName() {
                 </div>
                 <div className="w-full">
                   <input
-                    placeholder="Tenant's Legal Last Name"
+                    placeholder="Last Name"
                     name="tenantLastName"
                     type="text"
                     onChange={(e) => handleTenantNameChange(e, i)}
