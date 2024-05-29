@@ -19,11 +19,7 @@ const store = configureStore({
     contactInfo: contactInfoReducer,
     depositInfo: depositInfoReducer,
     leaseTermInfo: leaseTermInfoReducer,
-<<<<<<< HEAD
     rentalUnit: rentalUnitReducer,
-=======
-    propertyInfo: propertyInfoReducer,
->>>>>>> 932f9ad (hi)
     utilityInfo: utilityInfoReducer,
   },
 });
