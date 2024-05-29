@@ -31,7 +31,11 @@ export default function App() {
 
   const allPages = {
     1: <Name />,
+<<<<<<< HEAD
     2: <RentalUnit />,
+=======
+    2: <PropertyInfo />,
+>>>>>>> 932f9ad (hi)
     3: <ContactInfo />,
     4: <LeaseTermInfo />,
     5: <DepositInfo />,

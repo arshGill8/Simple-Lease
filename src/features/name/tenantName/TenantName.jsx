@@ -35,6 +35,7 @@ export default function TenantName() {
                 <div className="w-full">
                   <input
                     placeholder="First Name"
+                    placeholder="Tenant's Legal First Name"
                     name="tenantFirstName"
                     type="text"
                     onChange={(e) => handleTenantNameChange(e, i)}
@@ -44,7 +45,11 @@ export default function TenantName() {
                 </div>
                 <div className="w-full">
                   <input
+<<<<<<< HEAD
                     placeholder="Last Name"
+=======
+                    placeholder="Tenant's Legal Last Name"
+>>>>>>> 932f9ad (hi)
                     name="tenantLastName"
                     type="text"
                     onChange={(e) => handleTenantNameChange(e, i)}
