@@ -9,6 +9,12 @@ import { utilityInfoReducer } from "../features/utilityInfo";
 import { tenantSignatureReducer } from "../features/signature/tenantSignature";
 import { landlordSignatureReducer } from "../features/signature/landlordSignature";
 import { currentPageReducer } from "../features/currentPage";
+
+
+
+
+
+
 const store = configureStore({
   reducer: {
     currentPage: currentPageReducer,
