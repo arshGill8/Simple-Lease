@@ -11,12 +11,12 @@ export default function ThankYou() {
   const contactInfo = useSelector((state) => state.contactInfo);
   const depositInfo = useSelector((state) => state.depositInfo);
   const leaseTermInfo = useSelector((state) => state.leaseTermInfo);
-  const propertyInfo = useSelector((state) => state.propertyInfo);
+  const rentalUnit = useSelector((state) => state.rentalUnit);
   const utilityInfo = useSelector((state) => state.utilityInfo);
   console.log(
     landlordName,
     tenantName,
-    propertyInfo,
+    rentalUnit,
     contactInfo,
     leaseTermInfo,
     utilityInfo,
@@ -37,7 +37,7 @@ export default function ThankYou() {
         contactInfo,
         depositInfo,
         leaseTermInfo,
-        propertyInfo,
+        rentalUnit,
         utilityInfo,
       },
     })
