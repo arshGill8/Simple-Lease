@@ -1,8 +1,4 @@
-# React + Vite
+Zip through creating a new lease application faster than ever before with Simple Lease. (Ontario, Canada Version)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Deployed at: https://simple-lease.vercel.app/
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
