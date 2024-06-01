@@ -70,7 +70,7 @@ export default function App() {
             />
           </div>
         ) : (
-          "12"
+          ""
         )}
         {/* <h2 className="p-3 rounded-full border-2 my-5 mb-4 ">{currentPage}/7</h2> */}
       </div>

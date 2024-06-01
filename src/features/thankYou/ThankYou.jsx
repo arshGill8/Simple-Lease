@@ -2,7 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import DownloadIcon from "../../common/DownloadIcon";
-
+import { Triangle } from "react-loader-spinner";
+import { useState } from "react";
 export default function ThankYou() {
   const landlordName = useSelector((state) => state.landlordName);
   const tenantName = useSelector((state) => state.tenantName);
@@ -13,18 +14,11 @@ export default function ThankYou() {
   const leaseTermInfo = useSelector((state) => state.leaseTermInfo);
   const rentalUnit = useSelector((state) => state.rentalUnit);
   const utilityInfo = useSelector((state) => state.utilityInfo);
-  console.log(
-    landlordName,
-    tenantName,
-    rentalUnit,
-    contactInfo,
-    leaseTermInfo,
-    utilityInfo,
-    depositInfo,
-    landlordSignature,
-    tenantSignature
-  );
+
+  const [loading, setLoading] = useState(false);
+
   const downloadPDF = () => {
+    setLoading(true);
     axios({
       url: "https://simple-lease-api.onrender.com/createForm",
       method: "POST",
@@ -50,6 +44,7 @@ export default function ThankYou() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error downloading the PDF:", error);
@@ -66,9 +61,19 @@ export default function ThankYou() {
       <button
         onClick={downloadPDF}
         type="button"
-        className="flex gap-3  text-gray-900 bg-green-500		 hover:bg-green-600 focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center dark:focus:ring-[#F7BE38]/50 me-2 mb-2"
+        className="flex gap-3 m-auto text-white bg-green-500 hover:bg-green-600  font-medium rounded-lg lg:text-lg px-5 py-2.5 items-center"
       >
-        <DownloadIcon />
+        {!loading && <DownloadIcon />}
+        {loading && (
+          <Triangle
+            visible={true}
+            height="40"
+            width="40"
+            color="#FFFFFF"
+            ariaLabel="triangle-loading"
+            wrapperStyle={{}}
+          />
+        )}
         Download Completed File
       </button>
     </div>
