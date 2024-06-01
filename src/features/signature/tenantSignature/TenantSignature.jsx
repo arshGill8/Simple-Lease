@@ -68,6 +68,7 @@ export default function TenantSignature() {
                   Tenant signature
                 </label>
                 <SignatureCanvas
+                  clearOnResize={false}
                   maxLength={80}
                   penColor="black"
                   canvasProps={{

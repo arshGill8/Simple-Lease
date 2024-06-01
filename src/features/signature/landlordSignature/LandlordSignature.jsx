@@ -66,6 +66,7 @@ export default function LandlordSignature() {
                   Landlord signature
                 </label>
                 <SignatureCanvas
+                  clearOnResize={false}
                   maxLength={80}
                   penColor="black"
                   canvasProps={{
